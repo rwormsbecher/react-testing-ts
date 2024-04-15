@@ -11,7 +11,7 @@ export const useFetchCities = () => {
 	useEffect(() => {
 		const fetchCities = async () => {
 			try {
-				const response = await fetch("https://greensocapi.azurewebsites.net/api/Cities");
+				const response = await fetch("https://boot-finder.azurewebsites.net/api/Cities");
 				const data: CitiesApiResponse = await response.json();
 				setCities(data.cities);
 				setActiveCity(data.cities[0]);
